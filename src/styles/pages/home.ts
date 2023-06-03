@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import fonts from "@/fonts";
 
-const BannerContainer = styled.div`
+export const BannerContainer = styled.div`
   background-color: ${({ theme: { COLORS } }) => COLORS.WHITE};
   width: 100%;
   height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 80px;
 
   p {
     font-family: ${fonts.inter.style.fontFamily};
@@ -20,14 +21,14 @@ const BannerContainer = styled.div`
   }
 `;
 
-export default function Banner() {
-  return (
-    <BannerContainer>
-      <p>
-        Bem-vindo ao Blog do
-        <br />
-        <span>Thundar, o Protetor do Trovão</span>
-      </p>
-    </BannerContainer>
-  );
-}
+export const ContainerSections = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const SectionPosts = styled.section`
+  width: 100%;
+  padding: 0 80px;
+`;

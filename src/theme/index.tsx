@@ -9,6 +9,8 @@ const theme = {
     GRAY_300: "#7C7C8A",
     GRAY_200: "#C4C4CC",
     GRAY_100: "#E1E1E6",
+
+    PURLPLE: "#ae6fff",
   },
   FONT_FAMILY: {
     REGULAR: "Roboto_400Regular",

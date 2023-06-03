@@ -16,14 +16,19 @@ export const Header = styled.header`
   }) => GRAY_700};
 
   nav {
-    display: flex;
-    gap: 60px;
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 60px;
 
-    a {
-      color: white;
+      li {
+        a {
+          color: white;
 
-      &:hover {
-        text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -34,9 +39,17 @@ export default function NavBar() {
     <Header>
       <Image alt="logo" src={Logo} width={300} />
       <nav>
-        <Link href="/">Inicio</Link>
-        <Link href="/posts">Posts</Link>
-        <Link href="/sobre">Sobre</Link>
+        <ul>
+          <li>
+            <Link href="/">Inicio</Link>
+          </li>
+          <li>
+            <Link href="/posts">Posts</Link>
+          </li>
+          <li>
+            <Link href="/about">Sobre</Link>
+          </li>
+        </ul>
       </nav>
     </Header>
   );
