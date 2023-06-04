@@ -48,11 +48,16 @@ export default function ListPosts({ posts }: ListPostsProps) {
             width={220}
             height={130}
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
+              borderRadius: 10,
             }}
           />
           <h4>{title}</h4>
-          <p>{description}</p>
+          <p>
+            {description.length > 60
+              ? `${description.slice(0, 60)}...`
+              : description}
+          </p>
         </li>
       ))}
     </List>
