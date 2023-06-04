@@ -14,19 +14,22 @@ const List = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 
   li {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     max-width: 260px;
     padding: 20px;
     border-radius: 10px;
     background-color: #252525;
     color: white;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   h4 {
