@@ -25,6 +25,13 @@ export const BannerContainer = styled.div`
       font-size: 3rem;
     }
   }
+
+  @media (max-width: 430px) {
+    p {
+      font-size: 2rem;
+    }
+  }
+
 `;
 
 export const ContainerSections = styled.div`
