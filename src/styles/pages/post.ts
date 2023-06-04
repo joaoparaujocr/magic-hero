@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const AboutContainer = styled.section`
+export const Container = styled.div`
+  width: 100%;
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 40px 80px;
+  gap: 10px;
 
-  p {
-    white-space: pre-wrap;
+  > p {
     font-size: 1.4rem;
   }
 `;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import ImageDefault from "../../public/image.png";
 import Post from "@/interface/Post";
+import Link from "next/link";
 
 interface ListPostsProps {
   posts: Post[];
@@ -42,22 +43,24 @@ export default function ListPosts({ posts }: ListPostsProps) {
     <List>
       {posts.map(({ description, id, title }) => (
         <li key={id}>
-          <Image
-            src={ImageDefault}
-            alt=""
-            width={220}
-            height={130}
-            style={{
-              objectFit: "cover",
-              borderRadius: 10,
-            }}
-          />
-          <h4>{title}</h4>
-          <p>
-            {description.length > 60
-              ? `${description.slice(0, 60)}...`
-              : description}
-          </p>
+          <Link key={id} href={`/post/${id}`}>
+            <Image
+              src={ImageDefault}
+              alt=""
+              width={220}
+              height={130}
+              style={{
+                objectFit: "cover",
+                borderRadius: 10,
+              }}
+            />
+            <h4>{title}</h4>
+            <p>
+              {description.length > 60
+                ? `${description.slice(0, 60)}...`
+                : description}
+            </p>
+          </Link>
         </li>
       ))}
     </List>
