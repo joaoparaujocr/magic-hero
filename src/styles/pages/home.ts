@@ -8,7 +8,7 @@ export const BannerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 80px;
+  padding: 40px 80px;
 
   p {
     font-family: ${fonts.inter.style.fontFamily};
@@ -17,6 +17,12 @@ export const BannerContainer = styled.div`
     span {
       font-weight: 700;
       color: #ae6fff;
+    }
+  }
+
+  @media (max-width: 750px) {
+    p {
+      font-size: 3rem;
     }
   }
 `;
